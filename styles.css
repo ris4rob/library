@@ -1,5 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap');
+
 *, *::before, *::after {
           padding: 0;
           margin: 0;
           box-sizing: border-box;
+          font-family: 'Inter', sans-serif;
+}
+
+body {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 10% 90%;
+          height: 100vh;
+}
+
+.top {
+          background-color: #D3B99F;
+          display: flex;
+          align-items: center;
+          padding-left: 2rem;
+}
+
+
+.main-section {
+          background-color: #D3D0CB;
+          position: relative;
+}
+
+
+
+
+.add-btn {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 6px;
+          /* border: none; */
+          font-size: 2rem;
+          position: absolute;
+          bottom: 3rem;
+          right: 3rem;
+}
+
+.book-dialog {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 45%;
+          border-radius: 1rem;
+          letter-spacing:.8px;
+          line-height: 1.5;
+}
+
+.book-dialog form {
+          display: grid;
+          padding: 3rem;
+}
+
+.book-dialog label, .label{
+          margin-top: 1rem;
+}
+
+.label label{
+          /* display: flex;
+          align-content: center; */
+          margin-top: 0;
+}
+
+.closeBtn {
+          margin-top: 1rem;       
 }
