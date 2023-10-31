@@ -29,6 +29,7 @@ function addBookToLibrary(data) {
 
 function displayBook(book) {
   // create a div for book and append all the details to it
+  myLibrary.forEach((book) => {});
 }
 
 addBtn.addEventListener('click', () => {
