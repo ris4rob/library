@@ -8,18 +8,18 @@ const mainSection = document.querySelector('.main-section');
 let cardCloseBtn = document.querySelectorAll('#cardCloseBtn');
 let readBtn = document.querySelectorAll('#read');
 
-class Library {
-// CONSTRUCTOR?? //
-
-constructor(title, author, pages, read) {
+class Book {
   // Book object constructor...
-  this.title = title;
+  constructor(title,author,pages,read) {
+    this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read;
+  }
+  
 }
 
-addBookToLibrary(form) {
+function addBookToLibrary(form) {
   // Create book from form data
   const newBook = new Book(
     form.title.value,
@@ -32,9 +32,7 @@ addBookToLibrary(form) {
   myLibrary.push(newBook);
 }
 
-
-// METHOD 1 //
-displayBook(myLibrary) {
+function displayBook(myLibrary) {
   // create a div for book and append all the details to it
   let book = myLibrary[myLibrary.length - 1];
   let index = myLibrary.length - 1;
@@ -53,22 +51,20 @@ displayBook(myLibrary) {
   });
 }
 
-// METHOD 2
-changeReadStatus(e) {
+function changeReadStatus(e) {
   const readPushed = e.target.index;
 
   console.log(readPushed);
 }
 
-
-eventHandler(e) {
+function eventHandler(e) {
   const buttonPressed = e.target;
   const removeIndex = e.target.index;
   myLibrary.splice(removeIndex, 1);
   buttonPressed.parentNode.remove();
 }
 
-createBookCard(book, index) {
+function createBookCard(book, index) {
   const div = document.createElement('div');
   div.classList.add('book-card');
 
@@ -121,11 +117,6 @@ createBookCard(book, index) {
 
   mainSection.appendChild(div);
 }
-
-}
-
-
-// WHAT DO WE PUT EVENT HANDLERS AS //
 
 // EVENT HANDLERS
 
